@@ -8,6 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="js/functions.js"></script>
     <script src="js/javascript-fundamentals.js"></script>
+    <script src="js/conditions.js"></script>
 </head>
 
 <body class="mx-auto h-full max-w-7xl">

@@ -6,7 +6,7 @@ function variables(){
     let admin;
     name = "Jhon";
     admin = name;
-    alert(admin);
+    console.log(admin);
 }
 /**
  * Naming convention is a good practice for a developer that wants
