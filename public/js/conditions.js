@@ -128,3 +128,103 @@ function primeNumberCalculator(range){
     }
     console.log(primeNumbers);
 }
+/**
+ * Change a code from a switch statement into
+ * an if else.
+* */
+function switchToIfElse(){
+    let browser = prompt("Choose your browser!");
+    if(browser === 'Edge') alert( "You've got the Edge!" );
+    else if(browser === 'Chrome' ||
+        browser === 'FireFox' ||
+        browser === 'Safari' ||
+        browser === 'Opera') alert('Okay we support these browser too')
+    else alert('We hope that this page looks ok!')
+}
+
+
+/**
+ * Change a code from an if-else statement into
+ * a switch one.
+ * */
+function ifElseToSwitch(){
+    let a = +prompt('a?', '');
+    switch(a){
+        case 0:
+            alert(0);
+            break;
+        case 1:
+            alert(1);
+            break;
+        case 2:
+        case 3:
+            alert('2,3');
+            break;
+    }
+}
+
+function checkAgeV2(age) {
+    return (age > 18) || confirm('Did parents allow you?');
+}
+
+function min(firstNumber, secondNumber){
+
+    return (firstNumber < secondNumber) ? firstNumber : secondNumber;
+}
+/**
+ * To make it works:
+ * ```
+ * let x = prompt("Value of x?");
+ * let power = prompt(`Power of ${x} ?`);
+ *
+ * (+power < 0) ? console.log(`Power not supported with number below than 0`) : console.log(pow(x,power));
+ * ```
+* */
+function pow(x, power){
+    let base = x;
+    for (let i = 0; i < power; i++)
+        x *= base;
+    return x;
+}
+
+/**
+ * Function that describe which type of
+ * argument you gave
+* */
+function describe(argument){
+    switch(typeof argument){
+        case "number":
+            return `${argument} is a number!`;
+            break;
+        case "string":
+            return `${argument} is a string`;
+            break;
+        case "boolean":
+            return `${argument} is boolean`;
+            break;
+        case "undefined":
+            return `${argument} is undefined`;
+            break;
+        default:
+            return `${argument} is null`;
+            break;
+    }
+}
+
+/**
+ * Create a function that get a name and its
+ * fallback, that return the name if it's noted empty
+ * otherwise its fallback.
+ *
+ * The only rule is that I should only use logical operation.
+* */
+
+function getUsername(name, fallback){
+    return (name) || (fallback) || "Anonymous";
+}
+
+/**
+ * Transform a function multiply(a,b) to a function expression
+ * and then make it into an arrow function `() => ` smth
+* */
+multiply = (a, b) => a * b;

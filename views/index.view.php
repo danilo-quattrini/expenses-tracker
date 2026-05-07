@@ -9,6 +9,7 @@
     <script src="js/functions.js"></script>
     <script src="js/javascript-fundamentals.js"></script>
     <script src="js/conditions.js"></script>
+    <script src="js/arrays.js"></script>
 </head>
 
 <body class="mx-auto h-full max-w-7xl">
