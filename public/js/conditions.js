@@ -3,11 +3,11 @@
  *
  * If the visitor enters “ECMAScript”, then output “Right!”, otherwise – output: “You don’t know? ECMAScript!”
 * */
-function quiz(){
-    let solution = 'ECMAScript';
-    let answer = prompt(`What's the “official” name of JavaScript?`);
+function quiz () {
+  const solution = 'ECMAScript'
+  const answer = prompt('What\'s the “official” name of JavaScript?')
 
-    alert(answer === solution ? `Right!` : `You don't know? ${solution}!`);
+  alert(answer === solution ? 'Right!' : `You don't know? ${solution}!`)
 }
 /**
  * Using if...else, write the code which gets a number via prompt and then shows in alert:
@@ -16,12 +16,12 @@ function quiz(){
  * - 0, if equals zero;
  * In this task we assume that the input is always a number
 * */
-function showTheSign(){
-    let number = prompt(`Write a number and check its sign`);
+function showTheSign () {
+  const number = prompt('Write a number and check its sign')
 
-    if(number > 0) alert(1);
-    else if (number < 0) alert(-1)
-    else alert(0)
+  if (number > 0) alert(1)
+  else if (number < 0) alert(-1)
+  else alert(0)
 }
 
 /**
@@ -34,8 +34,8 @@ function showTheSign(){
  * alert(! (checkAge(90)) ? `Your are is from 14 to 90 years old` : `Your age is NOT from 14 to 90 years old`)
  * ```
 * */
-function checkAge(age){
-    return age >= 14 && age <= 90;
+function checkAge (age) {
+  return age >= 14 && age <= 90
 }
 
 /**
@@ -50,29 +50,28 @@ function checkAge(age){
  * easyLogin(user);
  * ```
 */
-function easyLogin(user){
-    if(! user) return alert("Canceled");
-    if(user !== "Admin") return alert("I don't know you")
+function easyLogin (user) {
+  if (!user) return alert('Canceled')
+  if (user !== 'Admin') return alert("I don't know you")
 
-    let password = prompt("Password?");
+  const password = prompt('Password?')
 
-    if(! password) return alert("Canceled");
-    if(password !== "The Master") return alert("Wrong Password!");
+  if (!password) return alert('Canceled')
+  if (password !== 'The Master') return alert('Wrong Password!')
 
-    return alert("Welcome");
+  return alert('Welcome')
 }
 
 /**
  * To Execute the code:
  * `evenNumbers();`
 * */
-function evenNumbers(){
-    let  i = 2;
-    while (i <= 10){
-        if(i % 2 === 0)
-            alert(i);
-        i++;
-    }
+function evenNumbers () {
+  let i = 2
+  while (i <= 10) {
+    if (i % 2 === 0) alert(i)
+    i++
+  }
 }
 
 /**
@@ -89,12 +88,12 @@ function evenNumbers(){
  * ```
 * */
 
-function validateNumber(){
-    let numberToValidate = null;
-    do {
-        numberToValidate = prompt("Enter a number greater than 100", '0');
-    }while(numberToValidate < 100 && numberToValidate)
-    alert(`Congratulation you wrote a number greater than 100 that's ${numberToValidate}`);
+function validateNumber () {
+  let numberToValidate = null
+  do {
+    numberToValidate = prompt('Enter a number greater than 100', '0')
+  } while (numberToValidate < 100 && numberToValidate)
+  alert(`Congratulation you wrote a number greater than 100 that's ${numberToValidate}`)
 }
 
 /**
@@ -114,64 +113,68 @@ function validateNumber(){
  * ```
  * */
 
-function primeNumberCalculator(range){
-    let primeNumbers = [];
-    for (let i = 2; i <= range; i++) {
-        let isPrime = true;
-        for (let j = 2; j <= Math.sqrt(i); j++) {
-            if(i % j === 0){
-                isPrime = false;
-                break
-            }
-        }
-        if(isPrime) primeNumbers.push(i);
+function primeNumberCalculator (range) {
+  const primeNumbers = []
+  for (let i = 2; i <= range; i++) {
+    let isPrime = true
+    for (let j = 2; j <= Math.sqrt(i); j++) {
+      if (i % j === 0) {
+        isPrime = false
+        break
+      }
     }
-    console.log(primeNumbers);
+    if (isPrime) primeNumbers.push(i)
+  }
+  console.log(primeNumbers)
 }
 /**
  * Change a code from a switch statement into
  * an if else.
 * */
-function switchToIfElse(){
-    let browser = prompt("Choose your browser!");
-    if(browser === 'Edge') alert( "You've got the Edge!" );
-    else if(browser === 'Chrome' ||
+function switchToIfElse () {
+  const browser = prompt('Choose your browser!')
+  if (browser === 'Edge') alert("You've got the Edge!")
+  else if (browser === 'Chrome' ||
         browser === 'FireFox' ||
         browser === 'Safari' ||
         browser === 'Opera') alert('Okay we support these browser too')
-    else alert('We hope that this page looks ok!')
+  else alert('We hope that this page looks ok!')
 }
-
 
 /**
  * Change a code from an if-else statement into
  * a switch one.
  * */
-function ifElseToSwitch(){
-    let a = +prompt('a?', '');
-    switch(a){
-        case 0:
-            alert(0);
-            break;
-        case 1:
-            alert(1);
-            break;
-        case 2:
-        case 3:
-            alert('2,3');
-            break;
-    }
+function ifElseToSwitch () {
+  const a = +prompt('a?', '')
+  switch (a) {
+    case 0:
+      alert(0)
+      break
+    case 1:
+      alert(1)
+      break
+    case 2:
+    case 3:
+      alert('2,3')
+      break
+  }
 }
 
-function checkAgeV2(age) {
-    return (age > 18) || confirm('Did parents allow you?');
+function checkAgeV2 (age) {
+  return (age > 18) || confirm('Did parents allow you?')
 }
 
-function min(firstNumber, secondNumber){
-
-    return (firstNumber < secondNumber) ? firstNumber : secondNumber;
+function min (firstNumber, secondNumber) {
+  return (firstNumber < secondNumber) ? firstNumber : secondNumber
 }
 /**
+ * Returns the power of a number:
+ * @param {number} x the number to arise
+ * @param {number} n the power that must be a natural number
+ *
+ * @return {unescape | number} the power of the x;
+ *
  * To make it works:
  * ```
  * let x = prompt("Value of x?");
@@ -180,35 +183,41 @@ function min(firstNumber, secondNumber){
  * (+power < 0) ? console.log(`Power not supported with number below than 0`) : console.log(pow(x,power));
  * ```
 * */
-function pow(x, power){
-    let base = x;
-    for (let i = 0; i < power; i++)
-        x *= base;
-    return x;
+export function pow (x, n) {
+  if(n < 0) return NaN;
+  if(Math.round(n) != n) return NaN;
+
+  let result = 1;
+
+  for (let i = 0; i < n; i++) {
+    result *= x
+  }
+
+  return result;
 }
 
 /**
  * Function that describe which type of
  * argument you gave
 * */
-function describe(argument){
-    switch(typeof argument){
-        case "number":
-            return `${argument} is a number!`;
-            break;
-        case "string":
-            return `${argument} is a string`;
-            break;
-        case "boolean":
-            return `${argument} is boolean`;
-            break;
-        case "undefined":
-            return `${argument} is undefined`;
-            break;
-        default:
-            return `${argument} is null`;
-            break;
-    }
+function describe (argument) {
+  switch (typeof argument) {
+    case 'number':
+      return `${argument} is a number!`
+      break
+    case 'string':
+      return `${argument} is a string`
+      break
+    case 'boolean':
+      return `${argument} is boolean`
+      break
+    case 'undefined':
+      return `${argument} is undefined`
+      break
+    default:
+      return `${argument} is null`
+      break
+  }
 }
 
 /**
@@ -219,12 +228,37 @@ function describe(argument){
  * The only rule is that I should only use logical operation.
 * */
 
-function getUsername(name, fallback){
-    return (name) || (fallback) || "Anonymous";
+function getUsername (name, fallback) {
+  return (name) || (fallback) || 'Anonymous'
 }
 
 /**
  * Transform a function multiply(a,b) to a function expression
  * and then make it into an arrow function `() => ` smth
 * */
-multiply = (a, b) => a * b;
+// multiply = (a, b) => a * b
+
+/**
+ * Rewrite a function into an array function version, that's the function
+ * to rewrite:
+ * ```
+ * function ask(question, yes, no) {
+ *   if (confirm(question)) yes();
+ *   else no();
+ * }
+ *
+ * ask(
+ *   "Do you agree?",
+ *   function() { alert("You agreed."); },
+ *   function() { alert("You canceled the execution."); }
+ * );
+ * ```
+* */
+
+// const ask = (question, confirmAnswer, refuseAnswer) => confirm(question) ? confirmAnswer() : refuseAnswer()
+
+/** ask(
+'Do you agree?',
+  () => alert('You agreed.'),
+  () => alert('You canceled the execution.')
+)**/
