@@ -20,14 +20,18 @@ function filterWords (sentence, minLength) {
  * //
  * ```
 * */
-function summarize (arrayOfNumbers) {
+export function summarize (arrayOfNumbers) {
+  if(! arrayOfNumbers || arrayOfNumbers.length === 0 ) {
+    throw new Error(`The array it's empty or the argument of the function it's empty too`)
+  }
+
   const total = arrayOfNumbers.length
   const sum = arrayOfNumbers.reduce((acc, currentValue) => acc + currentValue, 0)
 
   return {
     total,
     sum,
-    average: total / sum,
+    average: sum / total,
     highest: Math.max(...arrayOfNumbers),
     lowest: Math.min(...arrayOfNumbers)
   }
