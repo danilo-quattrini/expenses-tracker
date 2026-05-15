@@ -36,3 +36,16 @@ export function summarize (arrayOfNumbers) {
     lowest: Math.min(...arrayOfNumbers)
   }
 }
+
+/**
+ * Return an array of unique values
+ * @param {array} values the array to check if the values inside it are unique or not
+ * @return {array} an array without any duplication.
+* */
+export function uniqueValues(values){
+    if(! values) {
+        throw new Error(`No array has been passed to the function`);
+    }
+    const cleanedValues = new Set(values);
+    return [...cleanedValues];
+}

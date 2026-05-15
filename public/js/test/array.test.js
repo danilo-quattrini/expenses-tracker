@@ -1,5 +1,5 @@
 import { describe } from 'mocha';
-import {summarize} from '../arrays.js'
+import {summarize, uniqueValues} from '../arrays.js'
 import {assert} from 'chai';
 
 describe('summarize', () => {
@@ -32,3 +32,24 @@ describe('summarize', () => {
         })
     })
 });
+
+describe('uniqueValues', () => {
+    describe('error states', () => {
+        it('should return an empty array when given an empty array', () => {
+            assert.deepEqual(uniqueValues([] ), []);
+        });
+
+        it('throw an error if no array has been passed', () => {
+            assert.throws(() => uniqueValues(), Error, `No array has been passed to the function`);
+        })
+    });
+
+    describe('normal state', () => {
+        it('should return an array without duplication', () => {
+            assert.deepEqual(uniqueValues([1,1,1,2,2,2,3,3,3]), [1,2,3]);
+        })
+        it('should return an array with one element', () => {
+            assert.deepEqual(uniqueValues([1]), [1]);
+        })
+    })
+})
